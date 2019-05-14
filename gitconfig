@@ -1,0 +1,27 @@
+[user]
+  name = Liam Griffiths
+  email = liamgriffiths@gmail.com
+[core]
+  excludesfile = ~/.gitignore
+	editor = nvim
+  ignorecase = false
+
+[push]
+  default = current
+
+[alias]
+  stat = status -sb
+  log = log --date=auto:human
+  co = checkout
+  uncommit = reset --soft HEAD^
+  stash = stash --include-untracked
+  recent = branch --sort=-committerdate
+
+[color]
+  ui = auto
+
+[diff]
+  tool = vimdiff
+
+[difftool]
+  prompt = false

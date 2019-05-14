@@ -144,6 +144,9 @@ colorscheme plain
 " setup terminal buffer with no numbers or listchars
 au TermOpen * setlocal listchars= nonumber norelativenumber
 
+"wrap output in quickfix window
+autocmd FileType qf setlocal wrap
+
 "syntax
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
@@ -152,7 +155,6 @@ let g:javascript_plugin_flow = 1
 let g:ale_linters = {'javascript': ['eslint', 'flow']}
 let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_rust_cargo_use_clippy = 1
-autocmd FileType qf setlocal wrap "wrap output in quickfix window
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 let g:ale_change_sign_column_color = 1
