@@ -158,6 +158,7 @@ let g:ale_rust_cargo_use_clippy = 1
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 let g:ale_change_sign_column_color = 1
+hi ALEWarningSign guifg=#A89C14
 hi ALESignColumnWithErrors guibg=none
 
 
