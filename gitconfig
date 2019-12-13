@@ -1,10 +1,12 @@
 [user]
   name = Liam Griffiths
   email = liamgriffiths@gmail.com
+  signingkey = A6CAEFAA
 [core]
   excludesfile = ~/.gitignore
 	editor = nvim
   ignorecase = false
+	pager = delta --light
 
 [push]
   default = current
@@ -16,6 +18,10 @@
   uncommit = reset --soft HEAD^
   stash = stash --include-untracked
   recent = branch --sort=-committerdate
+   # A better git stash (from vanev)
+  wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m 'wip --skip-ci'"
+  unwip = !git log -n 1 | grep -q -c 'wip --skip-ci' && git reset HEAD~1
+
 
 [color]
   ui = auto
